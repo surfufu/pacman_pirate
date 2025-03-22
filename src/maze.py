@@ -103,8 +103,18 @@ class Maze:
         Returns:
             bool: True si collision, False sinon
         """
+        # Créer un rectangle légèrement plus petit pour la détection
+        # Cela permet d'éviter les blocages aux bords
+        tolerance = 2  # Pixels de tolérance
+        check_rect = pygame.Rect(
+            rect.x + tolerance,
+            rect.y + tolerance,
+            rect.width - 2 * tolerance,
+            rect.height - 2 * tolerance
+        )
+        
         for wall in self.walls:
-            if rect.colliderect(wall):
+            if check_rect.colliderect(wall):
                 return True
         return False
     

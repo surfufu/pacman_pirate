@@ -9,6 +9,7 @@ Implémentation des menus et des transitions entre niveaux
 import pygame
 import sys
 import os
+import math
 
 class MenuManager:
     """Classe gérant les menus du jeu"""
@@ -50,7 +51,7 @@ class MenuManager:
         
         # Animation du titre
         self.animation_counter += self.animation_speed
-        title_offset = int(5 * abs(pygame.math.sin(self.animation_counter)))
+        title_offset = int(5 * abs(math.sin(self.animation_counter)))
         
         # Titre
         text_title = self.font_title.render("Pacman Pirate", True, self.color_title)
@@ -160,7 +161,7 @@ class MenuManager:
         
         # Animation du titre
         self.animation_counter += self.animation_speed
-        title_offset = int(5 * abs(pygame.math.sin(self.animation_counter)))
+        title_offset = int(5 * abs(math.sin(self.animation_counter)))
         
         # Titre
         text_title = self.font_title.render("Game Over", True, (255, 0, 0))  # Rouge
@@ -199,7 +200,7 @@ class MenuManager:
         
         # Animation du titre
         self.animation_counter += self.animation_speed
-        title_offset = int(5 * abs(pygame.math.sin(self.animation_counter)))
+        title_offset = int(5 * abs(math.sin(self.animation_counter)))
         
         # Titre
         text_title = self.font_title.render("Victoire !", True, (0, 255, 0))  # Vert

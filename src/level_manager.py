@@ -45,7 +45,9 @@ class LevelManager:
             "player_start": (1, 19),  # Position de départ du joueur (x, y)
             "enemies": [
                 {"type": "octopus", "position": (10, 10)},
-                {"type": "octopus", "position": (15, 5)}
+                {"type": "octopus", "position": (15, 5)},
+                {"type": "octopus", "position": (5, 15)},
+                {"type": "ship", "position": (18, 3)}
             ],
             "speed_multiplier": 1.0  # Multiplicateur de vitesse (normal)
         }

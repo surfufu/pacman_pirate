@@ -87,9 +87,8 @@ class Player:
         Returns:
             bool: True si collision, False sinon
         """
-        # Cette méthode sera implémentée quand la classe Maze sera prête
-        # Pour l'instant, on retourne False (pas de collision)
-        return False
+        # Utiliser la méthode check_collision de la classe Maze
+        return maze.check_collision(self.rect)
     
     def collect_point(self, points):
         """Collecte des points et met à jour le score
